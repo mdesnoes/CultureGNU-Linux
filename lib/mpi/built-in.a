@@ -1,0 +1,33 @@
+!<thin>
+//                                              244       `
+generic_mpih-lshift.o/
+generic_mpih-mul1.o/
+generic_mpih-mul2.o/
+generic_mpih-mul3.o/
+generic_mpih-rshift.o/
+generic_mpih-sub1.o/
+generic_mpih-add1.o/
+mpicoder.o/
+mpi-bit.o/
+mpi-cmp.o/
+mpih-cmp.o/
+mpih-div.o/
+mpih-mul.o/
+mpi-pow.o/
+mpiutil.o/
+
+/0              0           0     0     644     1688      `
+/23             0           0     0     644     1920      `
+/44             0           0     0     644     1920      `
+/65             0           0     0     644     1936      `
+/86             0           0     0     644     1768      `
+/109            0           0     0     644     1544      `
+/130            0           0     0     644     1544      `
+/151            0           0     0     644     11184     `
+/163            0           0     0     644     2424      `
+/174            0           0     0     644     3952      `
+/185            0           0     0     644     1440      `
+/197            0           0     0     644     4960      `
+/209            0           0     0     644     11424     `
+/221            0           0     0     644     7464      `
+/232            0           0     0     644     5576      `

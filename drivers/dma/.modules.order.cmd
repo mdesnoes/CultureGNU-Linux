@@ -1,0 +1,1 @@
+cmd_drivers/dma/modules.order := {   cat drivers/dma/dw/modules.order;   cat drivers/dma/hsu/modules.order;   cat drivers/dma/mediatek/modules.order;   cat drivers/dma/qcom/modules.order;   cat drivers/dma/ti/modules.order;   cat drivers/dma/xilinx/modules.order; :; } | awk '!x[$$0]++' - > drivers/dma/modules.order

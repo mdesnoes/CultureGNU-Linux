@@ -1,0 +1,12 @@
+fs/efivarfs/efivarfs.ko
+drivers/thermal/intel/x86_pkg_temp_thermal.ko
+net/netfilter/nf_log_common.ko
+net/netfilter/xt_mark.ko
+net/netfilter/xt_nat.ko
+net/netfilter/xt_LOG.ko
+net/netfilter/xt_MASQUERADE.ko
+net/netfilter/xt_addrtype.ko
+net/ipv4/netfilter/nf_log_arp.ko
+net/ipv4/netfilter/nf_log_ipv4.ko
+net/ipv4/netfilter/iptable_nat.ko
+net/ipv6/netfilter/nf_log_ipv6.ko

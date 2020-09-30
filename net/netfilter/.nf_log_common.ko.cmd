@@ -1,0 +1,1 @@
+cmd_net/netfilter/nf_log_common.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o net/netfilter/nf_log_common.ko net/netfilter/nf_log_common.o net/netfilter/nf_log_common.mod.o;  true
