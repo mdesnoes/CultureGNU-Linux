@@ -7,4 +7,8 @@
 	* Arguments : Aucun
 	* Exécution : _bash conf_lightdm.sh_
 
- * 
+* Script de personnalisation de l'écran de connexion par défaut :
+	* Arguments : Aucun
+	* Exécution : _bash conf_lightdm_defaut.sh_
+
+*
