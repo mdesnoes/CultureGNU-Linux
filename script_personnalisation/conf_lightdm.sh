@@ -22,6 +22,8 @@ fi
 echo -e "\n"
 
 echo "*** Création et écriture du fichier 50-no-guest.conf ***"
+sudo touch /etc/lightdm/lightdm.conf.d/50-no-guest.conf
+sudo chmod u+w,g+w,a+w /etc/lightdm/lightdm.conf.d/50-no-guest.conf
 if sudo echo -e "[SeatDefaults]\nallow-guest=false" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf ; then
 	echo " ==> OK"
 else
@@ -31,7 +33,9 @@ else
 fi
 echo -e "\n"
 
-echo "*** Ecriture des configurations dans le fichier lightdm-gtk-greeter.conf ***"
+echo "*** Création et écriture des configurations dans le fichier lightdm-gtk-greeter.conf ***"
+sudo touch /etc/lightdm/lightdm-gtk-greeter.conf
+sudo chmod u+w,g+w,a+w /etc/lightdm/lightdm-gtk-greeter.conf
 if sudo echo -e "[greeter]\nbackground = /usr/share/backgrounds/160218-deux-two_by_Pierre_Cante.jpg\ntheme-name = HighContrast\nfont-name = Ubuntu 15\nindicators = ~host;~spacer;~clock;~spacer;~session;~separator;~a11y;~separator;~language;~separator;~power\nshow-language-selector = false\na11y-states = +reader;+keyboard\nposition = -50%,center\ndefault-user-image = #computer\nuser-background = false" > /etc/lightdm/lightdm-gtk-greeter.conf ; then
 	echo " ==> OK"
 else
