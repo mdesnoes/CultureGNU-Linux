@@ -1,1 +1,0 @@
-cmd_drivers/media/platform/modules.order := {   cat drivers/media/platform/ti-vpe/modules.order;   cat drivers/media/platform/stm32/modules.order;   cat drivers/media/platform/davinci/modules.order;   cat drivers/media/platform/omap/modules.order;   cat drivers/media/platform/sunxi/modules.order; :; } | awk '!x[$$0]++' - > drivers/media/platform/modules.order
