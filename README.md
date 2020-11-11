@@ -1,4 +1,4 @@
-**Auteur** : *BALAVOINE Kévin, CHOVEAU Etienne, DESNOES Mathis*
+**Auteurs** : *BALAVOINE Kévin, CHOVEAU Etienne, DESNOES Mathis*
 
 # CultureGNU-Linux
 
