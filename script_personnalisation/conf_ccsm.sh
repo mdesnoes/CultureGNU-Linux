@@ -11,8 +11,8 @@ fi
 echo -e "\n"
 
 
-echo "*** Sauvegarde de l'ancien environnement dans le fichier unity_original.ini ***"
-if sudo cp ~/.config/compiz-1/compizconfig/unity.ini ~/.config/compiz-1/compizconfig/unity_original.ini ; then
+echo "*** Création d'un nouveau profil : unity.ini ***"
+if sudo touch ~/.config/compiz-1/compizconfig/unity.ini ; then
 	echo " ==> OK"
 else
 	echo " ==> NOK"
@@ -25,6 +25,16 @@ echo "*** Gestion de l'interface par flat-file ***"
 if sudo echo -e "[general_ubuntu]
 backend = ini
 profile = unity" > ~/.config/compiz-1/compizconfig/config ; then
+	echo " ==> OK"
+else
+	echo " ==> NOK"
+	echo "*** Fin du script ***"
+	exit 0
+fi
+echo -e "\n"
+
+echo "*** Modification des permissions d'accès à unity.ini ***"
+if sudo chmod 777 ~/.config/compiz-1/compizconfig/unity.ini ; then
 	echo " ==> OK"
 else
 	echo " ==> NOK"

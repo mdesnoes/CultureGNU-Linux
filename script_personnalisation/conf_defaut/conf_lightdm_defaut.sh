@@ -1,48 +1,17 @@
 #!/bin/bash
 
 
-###############################################################################################################
-# Pour remettre les configurations par défaut, on supprime les fichiers qui ont été créés puis  	      #
-# on copie les configurations enregistrées dans le fichier lightdm.conf_original dans le fichier lightdm.conf #
-# Si le fichier lightdm.conf_original n'existe pas, on réecrit le fichier lightdm.conf 			      #
-###############################################################################################################
 
-echo "*** Suppression du fichier /etc/lightdm/lightdm-gtk-greeter.conf ***"
-if sudo rm /etc/lightdm/lightdm-gtk-greeter.conf ; then
+echo "*** Réécriture du fichier lightdm-gtk-greeter.conf ***"
+touch /etc/lightdm/lightdm-gtk-greeter.conf
+sudo chmod u+w,g+w,a+w /etc/lightdm/lightdm-gtk-greeter.conf
+if sudo echo -e "[greeter]\nbackground = /usr/share/backgrounds/160218-deux-two_by_Pierre_Cante.jpg\nicon-theme-name = default\nfont-name = Ubuntu 13\nindicators = ~host;~spacer;~session;~a11y;~language;~clock;~power\nshow-language-selector = false\na11y-states = +reader;+keyboard\nposition = -63%,end -45%,center\ndefault-user-image = #" > /etc/lightdm/lightdm-gtk-greeter.conf ; then
 	echo " ==> OK"
-fi
-echo -e "\n"
-
-echo "*** Suppression des fichiers dans le dossier /etc/lightdm/lightdm.conf.d ***"
-if sudo rm /etc/lightdm/lightdm.conf.d/* ; then
-	echo " ==> OK"
-fi
-echo -e "\n"
-
-if [ -e /etc/lightdm/lightdm.conf_original ] ; then
-	echo -e "*** Le fichier /etc/lightdm/lightdm.conf_original existe ***\n"
-
-	echo "*** Copie du fichier lightdm.conf_original dans le fichier lightdm.conf ***"
-	if sudo cp /etc/lightdm/lightdm.conf_original /etc/lightdm/lightdm.conf ; then
-		echo " ==> OK"
-	else
-		echo " ==> NOK"
-		echo "*** Fin du script ***"
-		exit 0
-	fi
 else
-	echo -e "*** Le fichier /etc/lightdm/lightdm.conf_original n'existe pas ***\n"
-
-	echo "*** Création et écriture des configurations dans le fichier lightdm.conf ***"
-	if sudo echo -e "[Seat:*]\nautologin-guest=false\nautologin-user=oem\nautologin-user-timeout=0" > /etc/lightdm/lightdm.conf ; then
-		echo " ==> OK"
-	else
-		echo " ==> NOK"
-		echo "*** Fin du script ***"
-		exit 0
-	fi
+	echo " ==> NOK"
+	echo "*** Fin du script ***"
+	exit 0
 fi
-echo -e "\n"
 
 
 echo "Le script s'est déroulé correctement"
